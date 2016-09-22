@@ -1,4 +1,4 @@
-The fork of https://github.com/cgswong/docker-aws without RDS CLI and built from java:8 image.
+The fork of https://github.com/cgswong/docker-aws without RDS CLI and built from ```alpine``` image.
 
 # What is docker-aws
 
