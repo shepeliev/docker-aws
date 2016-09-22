@@ -1,19 +1,18 @@
+The fork of https://github.com/cgswong/docker-aws without RDS CLI and built from java:8 image.
+
 # What is docker-aws
 
-[![Circle CI](https://circleci.com/gh/cgswong/docker-aws/tree/master.svg?style=svg)](https://circleci.com/gh/cgswong/docker-aws/tree/master)
+[![Circle CI](https://circleci.com/gh/shepeliev/docker-aws/tree/master.svg?style=svg)](https://circleci.com/gh/shepeliev/docker-aws/tree/master)
 
 [Docker](https://docker.io) image for running the [Amazon Web Services Command Line Interface](http://aws.amazon.com/cli/) and [s3cmd](https://github.com/s3tools/s3cmd). It creates a [Docker](https://docker.io) image containing all dependencies needed to run `aws` and `s3cmd`. That way, you can run these tools in a [Docker](https://docker.io) container without setting the dependencies on the host system.
 
 
 ## How to use
-There are specific CLI tools within the full range of the AWS CLI tool chain. Each of these has been mapped to a branch and tag so if you only need a specific CLI tool and/or have image size concerns there is something here to meet your needs. If you want all the AWS tool goodies, i.e. AWS CLI, RDS CLI, and S3CMD, then select the `master` branch with the `latest` tag in [Docker Hub](https://registry.hub.docker.com/u/cgswong/aws). Below are the mappings and usages:
+There are specific CLI tools within the full range of the AWS CLI tool chain. Each of these has been mapped to a branch and tag so if you only need a specific CLI tool and/or have image size concerns there is something here to meet your needs. Below are the mappings and usages:
 
 | GitHub Branch | Docker Tag | Usage Example                       |
 | ------------- | ---------- | ----------------------------------- |
-| master        | latest     | `docker run -it cgswong/aws:latest` |
-| aws           | aws        | `docker run -it cgswong/aws:aws`    |
-| s3cmd         | s3cmd      | `docker run -it cgswong/aws:s3cmd`  |
-| rds           | rds        | `docker run -it cgswong/aws:rds`    |
+| master        | latest     | `docker run -it agileapp/aws:latest`|
 
 The master/latest starts a `bash` shell so you can use whatever tool you need. For the other containers they will start with the `--version` flag which shows the version for the respective CLI tool. Simply specify whatever options you need for the respective tool (this will replace the default `--version` flag).
 
