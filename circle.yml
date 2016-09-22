@@ -8,12 +8,12 @@ dependencies:
   override:
     - docker info
     - if [ -e ~/docker/image.tar ]; then docker load --input ~/docker/image.tar; fi
-    - docker build -t cgswong/aws:latest .
-    - mkdir -p ~/docker; docker save cgswong/aws:latest > ~/docker/image.tar
+    - docker build -t agileapp/aws:latest .
+    - mkdir -p ~/docker; docker save agileapp/aws:latest > ~/docker/image.tar
 
 test:
   override:
-    - docker run cgswong/aws:latest aws --version
+    - docker run agileapp/aws:latest aws --version
 
 deployment:
   hub:
